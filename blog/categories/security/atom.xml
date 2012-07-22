@@ -4,7 +4,7 @@
   <title><![CDATA[Category: security | FRNTN's personal weblog]]></title>
   <link href="http://frntn.github.com/blog/categories/security/atom.xml" rel="self"/>
   <link href="http://frntn.github.com/"/>
-  <updated>2012-07-23T01:28:24+02:00</updated>
+  <updated>2012-07-23T01:29:51+02:00</updated>
   <id>http://frntn.github.com/</id>
   <author>
     <name><![CDATA[Matthieu Fronton]]></name>
@@ -20,7 +20,7 @@
     <id>http://frntn.github.com/blog/2012/07/23/brower-exploit-against-ssl-and-tls-a-dot-k-a-beast-explained</id>
     <content type="html"><![CDATA[<p>This post is composed of 3 parts</p>
 
-<h1>What is the leak in TLS 1.0 / SSL 3.0</h1>
+<h3>What is the leak in TLS 1.0 / SSL 3.0</h3>
 
 <p>(Draft : the purpose of this post is to main)</p>
 

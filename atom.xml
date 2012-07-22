@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[FRNTN's personal weblog]]></title>
+  <title><![CDATA[Un blog de plus]]></title>
   <link href="http://frntn.github.com/atom.xml" rel="self"/>
   <link href="http://frntn.github.com/"/>
-  <updated>2012-07-23T01:31:02+02:00</updated>
+  <updated>2012-07-23T01:51:32+02:00</updated>
   <id>http://frntn.github.com/</id>
   <author>
     <name><![CDATA[Matthieu Fronton]]></name>
@@ -14,17 +14,25 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Brower Exploit Against Ssl &amp; Tls (a.k.a. BEAST) explained]]></title>
+    <title type="html"><![CDATA[Brower Exploit Against Ssl &amp; Tls (a.k.a. BEAST) expliqué]]></title>
     <link href="http://frntn.github.com/blog/2012/07/23/brower-exploit-against-ssl-and-tls-a-dot-k-a-beast-explained/"/>
     <updated>2012-07-23T01:16:00+02:00</updated>
     <id>http://frntn.github.com/blog/2012/07/23/brower-exploit-against-ssl-and-tls-a-dot-k-a-beast-explained</id>
-    <content type="html"><![CDATA[<p>This post is composed of 3 parts</p>
-
-<h3>What is the leak in TLS 1.0 / SSL 3.0</h3>
-
-<p>(Draft : the purpose of this post is to main)</p>
+    <content type="html"><![CDATA[<p>(Draft : L&#8217;objectif de ce post est de tester le déploiement octopress)</p>
 
 <p><em>More to come&#8230;</em></p>
+
+<h3>Quelle est le problème ?</h3>
+
+<p>TODO</p>
+
+<h3>Comprendre la faille !</h3>
+
+<p>TODO</p>
+
+<h3>Limiter les risques&#8230;</h3>
+
+<p>TODO</p>
 ]]></content>
   </entry>
   

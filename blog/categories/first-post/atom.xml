@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[FRNTN's personal weblog]]></title>
-  <link href="http://frntn.github.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: first post | FRNTN's personal weblog]]></title>
+  <link href="http://frntn.github.com/blog/categories/first-post/atom.xml" rel="self"/>
   <link href="http://frntn.github.com/"/>
   <updated>2012-07-23T01:28:24+02:00</updated>
   <id>http://frntn.github.com/</id>
@@ -24,7 +24,7 @@
 
 <p>(Draft : the purpose of this post is to main)</p>
 
-<p><em>More to come&#8230;</em></p>
+<p><em>More to come...</em></p>
 ]]></content>
   </entry>
   

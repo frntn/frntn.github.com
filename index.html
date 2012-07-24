@@ -9,7 +9,8 @@
   <meta name="author" content="Matthieu Fronton">
 
   
-  <meta name="description" content="(Draft : L&#8217;objectif de ce post est de tester le déploiement octopress) More to come&#8230; Quelle est le problème ? TODO Comprendre la faille &hellip;">
+  <meta name="description" content="RabbitMQ est un Message Broker. Littéralement, un Broker signifie un Courtier.
+Dans notre cas, ou plus généralement dans l&#8217;informatique, la &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -64,6 +65,91 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/24/cas-dutilisation-de-rabbitmq/">Cas D&#8217;utilisation De RabbitMQ</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-24T01:57:00+02:00" pubdate data-updated="true">Jul 24<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>RabbitMQ est un <em>Message Broker</em>.</p>
+
+<p>Littéralement, un <em>Broker</em> signifie un <em>Courtier</em>.
+Dans notre cas, ou plus généralement dans l&#8217;informatique, la notion de
+<em>Broker</em> permet d&#8217;indiquer un <em>intermédiaire</em>.</p>
+
+<p>RabbitMQ est donc un intermédiaire entre deux systèmes ou composants
+souhaitant communiquer :
+- Le Producer : qui émet un message
+- Le Consumer : qui reçoit un message</p>
+
+<p>RabbitMQ est donc un facteur.
+Plus encore, RabbitMQ c&#8217;est l&#8217;équivalent de La Poste avec les boîtes à
+lettre, les plateformes de distribution, les facteurs, &#8230;</p>
+
+<p>Ci-après, voici les principaux modes de distribution possible.</p>
+
+<h3>Pile FILO : 1/1</h3>
+
+<p>Un Producer envoi à un Consumer via 1 file d&#8217;attente</p>
+
+<h3>Dispatch : 1/N</h3>
+
+<p>Un Producer envoi à N Consumers via 1 file d&#8217;attente</p>
+
+<h4>Round-Robbin</h4>
+
+<p>Tour à tour (indépendament de la charger)</p>
+
+<h4>Prefetch</h4>
+
+<p>Selon le plus disponible</p>
+
+<h3>Broadcast : 1/N</h3>
+
+<p>Un Producer envoi à N Consumers via N file d&#8217;attente (1 file par Consumer)
+Le message est envoyé à tous les consumers</p>
+
+<h3>Route : 1/N</h3>
+
+<p>Un Producer envoi à N Consumers via N file d&#8217;attente (1 file par Consumer)
+Le message est envoyé à tous les consumers abonnés à la route</p>
+
+<h4>Routes fixes</h4>
+
+<p>Le nom de la route est fixe</p>
+
+<h4>Routes dynamiques</h4>
+
+<p>Le nom de la route est pattern</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -126,6 +212,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/07/24/cas-dutilisation-de-rabbitmq/">Cas d&#8217;utilisation de RabbitMQ</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/07/23/brower-exploit-against-ssl-and-tls-a-dot-k-a-beast-explained/">Brower Exploit Against Ssl &amp; Tls (a.k.a. BEAST) expliqué</a>

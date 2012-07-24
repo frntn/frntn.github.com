@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Brower Exploit Against Ssl &amp; Tls (a.k.a. BEAST) expliqué - Un blog de plus</title>
+  <title>Cas d'utilisation de RabbitMQ - Un blog de plus</title>
   <meta name="author" content="Matthieu Fronton">
 
   
-  <meta name="description" content="(Draft : L&#8217;objectif de ce post est de tester le déploiement octopress) More to come&#8230; Quelle est le problème ? TODO Comprendre la faille &hellip;">
+  <meta name="description" content="RabbitMQ est un Message Broker. Littéralement, un Broker signifie un Courtier.
+Dans notre cas, ou plus généralement dans l&#8217;informatique, la &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://frntn.github.com/blog/2012/07/23/brower-exploit-against-ssl-and-tls-a-dot-k-a-beast-explained/">
+  <link rel="canonical" href="http://frntn.github.com/blog/2012/07/24/cas-dutilisation-de-rabbitmq/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -67,7 +68,7 @@
   
   <header>
     
-      <h1 class="entry-title">Brower Exploit Against Ssl &amp; Tls (a.k.a. BEAST) Expliqué</h1>
+      <h1 class="entry-title">Cas D'utilisation De RabbitMQ</h1>
     
     
       <p class="meta">
@@ -83,28 +84,63 @@
   
 
 
-<time datetime="2012-07-23T01:16:00+02:00" pubdate data-updated="true">Jul 23<span>rd</span>, 2012</time>
+<time datetime="2012-07-24T01:57:00+02:00" pubdate data-updated="true">Jul 24<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>(Draft : L&#8217;objectif de ce post est de tester le déploiement octopress)</p>
+<div class="entry-content"><p>RabbitMQ est un <em>Message Broker</em>.</p>
 
-<p><em>More to come&#8230;</em></p>
+<p>Littéralement, un <em>Broker</em> signifie un <em>Courtier</em>.
+Dans notre cas, ou plus généralement dans l&#8217;informatique, la notion de
+<em>Broker</em> permet d&#8217;indiquer un <em>intermédiaire</em>.</p>
 
-<h3>Quelle est le problème ?</h3>
+<p>RabbitMQ est donc un intermédiaire entre deux systèmes ou composants
+souhaitant communiquer :
+- Le Producer : qui émet un message
+- Le Consumer : qui reçoit un message</p>
 
-<p>TODO</p>
+<p>RabbitMQ est donc un facteur.
+Plus encore, RabbitMQ c&#8217;est l&#8217;équivalent de La Poste avec les boîtes à
+lettre, les plateformes de distribution, les facteurs, &#8230;</p>
 
-<h3>Comprendre la faille !</h3>
+<p>Ci-après, voici les principaux modes de distribution possible.</p>
 
-<p>TODO</p>
+<h3>Pile FILO : 1/1</h3>
 
-<h3>Limiter les risques&#8230;</h3>
+<p>Un Producer envoi à un Consumer via 1 file d&#8217;attente</p>
 
-<p>TODO</p>
+<h3>Dispatch : 1/N</h3>
+
+<p>Un Producer envoi à N Consumers via 1 file d&#8217;attente</p>
+
+<h4>Round-Robbin</h4>
+
+<p>Tour à tour (indépendament de la charger)</p>
+
+<h4>Prefetch</h4>
+
+<p>Selon le plus disponible</p>
+
+<h3>Broadcast : 1/N</h3>
+
+<p>Un Producer envoi à N Consumers via N file d&#8217;attente (1 file par Consumer)
+Le message est envoyé à tous les consumers</p>
+
+<h3>Route : 1/N</h3>
+
+<p>Un Producer envoi à N Consumers via N file d&#8217;attente (1 file par Consumer)
+Le message est envoyé à tous les consumers abonnés à la route</p>
+
+<h4>Routes fixes</h4>
+
+<p>Le nom de la route est fixe</p>
+
+<h4>Routes dynamiques</h4>
+
+<p>Le nom de la route est pattern</p>
 </div>
 
 
@@ -127,12 +163,12 @@
   
 
 
-<time datetime="2012-07-23T01:16:00+02:00" pubdate data-updated="true">Jul 23<span>rd</span>, 2012</time>
+<time datetime="2012-07-24T01:57:00+02:00" pubdate data-updated="true">Jul 24<span>th</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/premier-post/'>premier post</a>, <a class='category' href='/blog/categories/securité/'>securité</a>, <a class='category' href='/blog/categories/ssl/'>ssl</a>, <a class='category' href='/blog/categories/tls/'>tls</a>
+    <a class='category' href='/blog/categories/rabbitmq/'>rabbitmq</a>
   
 </span>
 
@@ -141,7 +177,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://frntn.github.com/blog/2012/07/23/brower-exploit-against-ssl-and-tls-a-dot-k-a-beast-explained/" data-via="" data-counturl="http://frntn.github.com/blog/2012/07/23/brower-exploit-against-ssl-and-tls-a-dot-k-a-beast-explained/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://frntn.github.com/blog/2012/07/24/cas-dutilisation-de-rabbitmq/" data-via="" data-counturl="http://frntn.github.com/blog/2012/07/24/cas-dutilisation-de-rabbitmq/" >Tweet</a>
   
   
   
@@ -150,8 +186,8 @@
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2012/07/23/brower-exploit-against-ssl-and-tls-a-dot-k-a-beast-explained/" title="Previous Post: Brower Exploit Against Ssl &amp; Tls (a.k.a. BEAST) expliqué">&laquo; Brower Exploit Against Ssl &amp; Tls (a.k.a. BEAST) expliqué</a>
       
-        <a class="basic-alignment right" href="/blog/2012/07/24/cas-dutilisation-de-rabbitmq/" title="Next Post: Cas d'utilisation de RabbitMQ">Cas d'utilisation de RabbitMQ &raquo;</a>
       
     </p>
   </footer>

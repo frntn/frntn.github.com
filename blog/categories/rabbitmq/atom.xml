@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Un blog de plus]]></title>
-  <link href="http://frntn.github.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: rabbitmq | Un blog de plus]]></title>
+  <link href="http://frntn.github.com/blog/categories/rabbitmq/atom.xml" rel="self"/>
   <link href="http://frntn.github.com/"/>
   <updated>2012-07-24T02:20:31+02:00</updated>
   <id>http://frntn.github.com/</id>
@@ -21,8 +21,8 @@
     <content type="html"><![CDATA[<p>RabbitMQ est un <em>Message Broker</em>.</p>
 
 <p>Littéralement, un <em>Broker</em> signifie un <em>Courtier</em>.
-Dans notre cas, ou plus généralement dans l&#8217;informatique, la notion de
-<em>Broker</em> permet d&#8217;indiquer un <em>intermédiaire</em>.</p>
+Dans notre cas, ou plus généralement dans l'informatique, la notion de
+<em>Broker</em> permet d'indiquer un <em>intermédiaire</em>.</p>
 
 <p>RabbitMQ est donc un intermédiaire entre deux systèmes ou composants
 souhaitant communiquer :
@@ -30,18 +30,18 @@ souhaitant communiquer :
 - Le Consumer : qui reçoit un message</p>
 
 <p>RabbitMQ est donc un facteur.
-Plus encore, RabbitMQ c&#8217;est l&#8217;équivalent de La Poste avec les boîtes à
-lettre, les plateformes de distribution, les facteurs, &#8230;</p>
+Plus encore, RabbitMQ c'est l'équivalent de La Poste avec les boîtes à
+lettre, les plateformes de distribution, les facteurs, ...</p>
 
 <p>Ci-après, voici les principaux modes de distribution possible.</p>
 
 <h3>Pile FILO : 1/1</h3>
 
-<p>Un Producer envoi à un Consumer via 1 file d&#8217;attente</p>
+<p>Un Producer envoi à un Consumer via 1 file d'attente</p>
 
 <h3>Dispatch : 1/N</h3>
 
-<p>Un Producer envoi à N Consumers via 1 file d&#8217;attente</p>
+<p>Un Producer envoi à N Consumers via 1 file d'attente</p>
 
 <h4>Round-Robbin</h4>
 
@@ -53,12 +53,12 @@ lettre, les plateformes de distribution, les facteurs, &#8230;</p>
 
 <h3>Broadcast : 1/N</h3>
 
-<p>Un Producer envoi à N Consumers via N file d&#8217;attente (1 file par Consumer)
+<p>Un Producer envoi à N Consumers via N file d'attente (1 file par Consumer)
 Le message est envoyé à tous les consumers</p>
 
 <h3>Route : 1/N</h3>
 
-<p>Un Producer envoi à N Consumers via N file d&#8217;attente (1 file par Consumer)
+<p>Un Producer envoi à N Consumers via N file d'attente (1 file par Consumer)
 Le message est envoyé à tous les consumers abonnés à la route</p>
 
 <h4>Routes fixes</h4>
@@ -68,29 +68,6 @@ Le message est envoyé à tous les consumers abonnés à la route</p>
 <h4>Routes dynamiques</h4>
 
 <p>Le nom de la route est pattern</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Brower Exploit Against Ssl &amp; Tls (a.k.a. BEAST) expliqué]]></title>
-    <link href="http://frntn.github.com/blog/2012/07/23/brower-exploit-against-ssl-and-tls-a-dot-k-a-beast-explained/"/>
-    <updated>2012-07-23T01:16:00+02:00</updated>
-    <id>http://frntn.github.com/blog/2012/07/23/brower-exploit-against-ssl-and-tls-a-dot-k-a-beast-explained</id>
-    <content type="html"><![CDATA[<p>(Draft : L&#8217;objectif de ce post est de tester le déploiement octopress)</p>
-
-<p><em>More to come&#8230;</em></p>
-
-<h3>Quelle est le problème ?</h3>
-
-<p>TODO</p>
-
-<h3>Comprendre la faille !</h3>
-
-<p>TODO</p>
-
-<h3>Limiter les risques&#8230;</h3>
-
-<p>TODO</p>
 ]]></content>
   </entry>
   

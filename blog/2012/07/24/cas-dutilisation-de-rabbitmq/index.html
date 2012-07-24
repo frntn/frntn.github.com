@@ -1,110 +1,95 @@
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>Cas d'utilisation de RabbitMQ - Un blog de plus</title>
-  <meta name="author" content="Matthieu Fronton">
+	<meta charset="utf-8">
+	<title>Cas d'utilisation de RabbitMQ - Un blog de plus</title>
+	<meta name="author" content="Matthieu Fronton">
 
-  
-  <meta name="description" content="RabbitMQ est un Message Broker. Littéralement, un Broker signifie un Courtier.
+	
+	<meta name="description" content="RabbitMQ est un Message Broker. Littéralement, un Broker signifie un Courtier.
 Dans notre cas, ou plus généralement dans l&#8217;informatique, la &hellip;">
-  
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link rel="canonical" href="http://frntn.github.com/blog/2012/07/24/cas-dutilisation-de-rabbitmq/">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="Un blog de plus" type="application/atom+xml">
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-
-  
-
+	<link href="/atom.xml" rel="alternate" title="Un blog de plus" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
 </head>
 
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">Un blog de plus</a></h1>
-  
-    <h2>Des trucs et des machins techniques...</h2>
-  
-</hgroup>
+<body>
+	<header id="header" class="inner"><h1><a href="/">Un blog de plus</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:frntn.github.com">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+	<form class="search" action="http://google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:frntn.github.com">
+	</form>
+</nav>
 
 </header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:frntn.github.com" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div>
-<article class="hentry" role="article">
-  
-  <header>
-    
-      <h1 class="entry-title">Cas D'utilisation De RabbitMQ</h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-24T01:57:00+02:00" pubdate data-updated="true">Jul 24<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-<div class="entry-content"><p>RabbitMQ est un <em>Message Broker</em>.</p>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h1 class="title">Cas D'utilisation De RabbitMQ</h1>
+	<div class="entry-content"><p>RabbitMQ est un <em>Message Broker</em>.</p>
 
 <p>Littéralement, un <em>Broker</em> signifie un <em>Courtier</em>.
 Dans notre cas, ou plus généralement dans l&#8217;informatique, la notion de
 <em>Broker</em> permet d&#8217;indiquer un <em>intermédiaire</em>.</p>
 
 <p>RabbitMQ est donc un intermédiaire entre deux systèmes ou composants
-souhaitant communiquer :
-- Le Producer : qui émet un message
-- Le Consumer : qui reçoit un message</p>
+souhaitant communiquer :</p>
+
+<ul>
+<li>Le Producer : qui émet un message</li>
+<li>Le Consumer : qui reçoit un message</li>
+</ul>
+
 
 <p>RabbitMQ est donc un facteur.
-Plus encore, RabbitMQ c&#8217;est l&#8217;équivalent de La Poste avec les boîtes à
-lettre, les plateformes de distribution, les facteurs, &#8230;</p>
+Plus encore, RabbitMQ c&#8217;est l&#8217;équivalent de La Poste avec les boîtes aux
+lettres, les plateformes de distribution, les facteurs, &#8230;</p>
 
 <p>Ci-après, voici les principaux modes de distribution possible.</p>
 
@@ -118,7 +103,7 @@ lettre, les plateformes de distribution, les facteurs, &#8230;</p>
 
 <h4>Round-Robbin</h4>
 
-<p>Tour à tour (indépendament de la charger)</p>
+<p>Tour à tour (indépendament de la charge)</p>
 
 <h4>Prefetch</h4>
 
@@ -144,14 +129,8 @@ Le message est envoyé à tous les consumers abonnés à la route</p>
 </div>
 
 
-  <footer>
-    <p class="meta">
-      
-  
-
-<span class="byline author vcard">Posted by <span class="fn">Matthieu Fronton</span></span>
-
-      
+<div class="meta">
+	<div class="date">
 
 
 
@@ -163,89 +142,44 @@ Le message est envoyé à tous les consumers abonnés à la route</p>
   
 
 
-<time datetime="2012-07-24T01:57:00+02:00" pubdate data-updated="true">Jul 24<span>th</span>, 2012</time>
-      
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/rabbitmq/'>rabbitmq</a>
-  
-</span>
+<time datetime="2012-07-24T01:57:00+02:00" pubdate data-updated="true">Jul 24<span>th</span>, 2012</time></div>
+	<div class="tags">
 
 
-    </p>
-    
-      <div class="sharing">
-  
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://frntn.github.com/blog/2012/07/24/cas-dutilisation-de-rabbitmq/" data-via="" data-counturl="http://frntn.github.com/blog/2012/07/24/cas-dutilisation-de-rabbitmq/" >Tweet</a>
-  
-  
-  
-</div>
+	<a class='category' href='/blog/categories/rabbitmq/'>rabbitmq</a>
 
-    
-    <p class="meta">
-      
-        <a class="basic-alignment left" href="/blog/2012/07/23/brower-exploit-against-ssl-and-tls-a-dot-k-a-beast-explained/" title="Previous Post: Brower Exploit Against Ssl &amp; Tls (a.k.a. BEAST) expliqué">&laquo; Brower Exploit Against Ssl &amp; Tls (a.k.a. BEAST) expliqué</a>
-      
-      
-    </p>
-  </footer>
-</article>
 
 </div>
+	
+</div></article>
 
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2012/07/24/cas-dutilisation-de-rabbitmq/">Cas d'utilisation de RabbitMQ</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/07/23/brower-exploit-against-ssl-and-tls-a-dot-k-a-beast-explained/">Brower Exploit Against Ssl &amp; Tls (a.k.a. BEAST) expliqué</a>
-      </li>
-    
-  </ul>
-</section>
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
 
 
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2012
 
-
-
-
-  
-</aside>
-
-
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Matthieu Fronton -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
+    Matthieu Fronton
 
 </footer>
-  
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
 
-
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
 
 
 
